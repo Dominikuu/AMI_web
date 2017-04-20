@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  background: #000; 
+}
+
+#header {
+  min-height: 200px;
+  background: url('http://epsolutions.centraldesktop.com/referralinformation/media/Desktop%20Template.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#header h1 {
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 400px;
+}
+.wrapper {
+  margin: 0px;
+  padding: 0px;
+}
+
+section {
+  margin: 0;
+  padding: 40px 30px;
+   text-align : center;
+}
+section h2 {
+  text-align: center;
+}
+section h3 a {
+  color: #222;
+}
+section h3 a:hover {
+  color: #444;
+}
+section .row i {
+  font-size: 3em;
+}
+section:nth-child(even) {
+  background: #EFEFEF;
+}
+section:nth-child(odd) {
+  background: #FFFFFF;
+}
+#footer {
+  padding: 20px;
+}
+ul.center {
+  display: block;
+  margin: auto;
+}
+
+section .show{
+  text-align : middle;
+  display: inline-block;
+}

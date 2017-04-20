@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>服務示範網頁-AMI</title>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css'>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src='https://cdn.zingchart.com/zingchart.min.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    
+
+  
+</head>
+<header>
+      <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="./index.html">Tai-power</a>
+        </div>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Item
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./index.html">Time Price</a></li>
+                <li class="divider"></li>
+                <li><a href="./manual1.html">Manual</a></li>
+              </ul>
+            </li>
+          <li><a href="http://www.taipower.com.tw/"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="home.html" ">Log out</a></li>
+        </ul>
+      </div>
+      </nav>
+    </header> 
+
+<body>
+<div align="center">
+
+<select id="industry" class="select" onchange="plot1()" align="center">
+    <option value="0">-- Industry --</option>
+    <option value="0" rel="icon-temperature">電子零件製造業</option>
+    <option value="1">金屬基本製造業</option>
+    <option value="2">化學材料製造業</option>
+    <option value="3">金屬製品製造業</option>
+    <option value="4">電腦電子產品及光學製品製造業</option>
+    <option value="5">非金屬礦物製品製造業</option>
+    <option value="6">紡織成衣業</option>
+    <option value="7">石油及煤製品製造業</option>
+    <option value="8">造紙業</option>
+</select> 
+
+</div>
+ <h1 id=title></h1>
+  <div class='dashboard'>
+
+<!-- section 1-1 -->
+  <div class='column'>
+    <div>
+    <div id="chart1" ></div></div>
+    <div id="chart2" class='item' >
+      <img src="output/past/0.png" id="pic" style=" margin: 15px;  flex-grow: 1;  min-height: 250px;  min-width: 250px;">
+    </div>
+    <div id="chart3" class='item'></div>
+  
+  </div>
+
+
+</div>
+
+
+<!-- section 2-1 -->
+
+
+<div class='dashboard'>
+
+  <div class='column'>
+   
+    <div id="chart5" class='item1'></div>
+    <div class='item'> 
+    <div class="wrapper">
+  
+  <section>
+    <header>
+      <h1>A時段</h1>
+    </header>
+    <div>
+      <p>整體尖峰時段與個別尖峰時段交集的時段 </p>  
+    </div>
+  </section>
+
+  <section>
+    <header>
+      <h1 >B時段</h1>
+    </header>
+    <div>
+      <p>整體離峰時段與個別尖峰時段交集和整體尖峰時段與個別離峰時段交集的時段</p>  
+    </div>
+  </section>
+  
+  <section>
+    <header>
+      <h1 >C時段</h1>
+    </header>
+    <div>
+      <p>整體離峰時段與個別尖峰時段交集和整體尖峰時段與個別離峰時段交集的時段</p>  
+    </div>
+  </section>
+  
+<section>
+    <header>
+      <h1>D時段</h1>
+    </header>
+    <div>
+      <p>整體離峰時段與個別離峰時段交集的時段</p>  
+    </div>
+  </section>
+  </div>
+
+</div><
+  </div>
+
+ 
+</div>
+
+<!--  -->
+<div class='dashboard'>
+
+  <div class='column'>
+   
+    <div id="chart8" class='item'></div>
+    <div>
+        <div class="block">
+        <section class="box">
+        
+        <h1>預估電價</h1>
+        <p>按下按鈕統計時間電價</p>
+          <button type="button" class="btn btn-danger btn-lg" onclick="price()">Calculation</button>
+          <ul>
+    <li id="price">  
+      <span class="number counter1" >0</span>
+    </li>
+  
+</ul>
+        </section>
+        </div>
+        </div>
+
+    </div>
+    
+    </div>
+  
+  
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1MVAl3Y1aZ0bKu6t2HOlGp_HEUjK1kvE&callback=initMap"
+            async defer></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>
